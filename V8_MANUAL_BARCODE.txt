@@ -1,0 +1,9 @@
+V8 Manual Barcode Entry
+
+User withdrawal now supports TWO methods:
+1. Scan the barcode using the camera.
+2. Type the barcode number manually and click "Use Typed Barcode" (or press Enter).
+
+For multiple-piece withdrawals, the user can mix methods: scan one piece, type the next, scan another, etc.
+
+Stock is still deducted only after the final Confirm Withdrawal step.

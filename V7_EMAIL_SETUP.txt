@@ -1,0 +1,15 @@
+V7 EMAIL SETUP
+
+The Reports panel now sends the PDF to the email address entered by the admin. There is no static recipient address.
+
+Email delivery still requires a sender account. For Gmail:
+1. Copy .env.example to .env
+2. Set SMTP_USER to the Gmail account that will SEND reports.
+3. Set SMTP_PASS to a Google App Password for that account (not the normal Gmail password).
+4. Keep SMTP_HOST=smtp.gmail.com, SMTP_PORT=465, SMTP_SECURE=true.
+5. SMTP_FROM can be the same as SMTP_USER.
+6. Restart the server with npm start after changing .env.
+
+When the admin clicks PDF + Email Report, they enter the recipient address(es). Those addresses are used as the To field for that send.
+
+Delete History removes transaction history records only; it does not change current inventory quantities.

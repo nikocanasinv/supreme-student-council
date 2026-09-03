@@ -1,0 +1,22 @@
+Council Inventory System - Barcode Feature
+
+Added:
+- Admin can enter one unique barcode for every physical piece when adding a supply.
+- Each entered code displays a live Code 128 barcode image.
+- Admin can auto-fill sequential numeric codes.
+- Admin Inventory has a Barcodes button.
+- Existing supplies can be assigned individual barcodes.
+- Admin can print one barcode or all available barcode labels.
+- Adding new stock through Manage Barcodes adds the same number of stock units.
+- USER withdrawals on itemized supplies scan one physical barcode per piece.
+- Withdrawn individual barcodes are marked WITHDRAWN and cannot be reused.
+- Legacy supplies without individual barcode records keep the old supply-level scanning behavior.
+- Database migration creates inventory_barcodes automatically when the server starts.
+
+Run:
+npm start
+Open:
+http://localhost:3000
+
+If the project is copied to a new machine, run:
+npm install

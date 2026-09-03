@@ -1,0 +1,22 @@
+COUNCIL INVENTORY SYSTEM V5
+
+NEW WITHDRAWAL FLOW
+1. Select a supply and quantity.
+2. Scan the required barcode(s).
+3. Scanner closes and shows a Review / Confirm Withdrawal screen.
+4. IMPORTANT: scanning alone does NOT deduct stock.
+5. Review supply, quantity, current stock, remaining stock, and scanned barcode(s).
+6. Click Confirm Withdrawal to send the withdrawal to the server.
+7. Server validates the barcode(s), atomically marks itemized barcodes as WITHDRAWN, deducts stock, and records the transaction.
+8. A Withdrawal Successful receipt appears with the remaining stock.
+9. Done returns to the current page and refreshes the quantity.
+
+If the server rejects the withdrawal, no stock is deducted and the user can scan again.
+
+V5 also includes separated transaction-history tabs:
+- All Activity
+- Adding History
+- Withdrawal History
+- Other Changes
+
+The Inventory Add Supply button continues to open the Add Supply page.

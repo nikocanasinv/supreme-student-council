@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Council Inventory System</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="toast" class="toast"></div>
+
+<section id="loginView" class="login-view">
+  <div class="login-card">
+    <div class="brand-mark">CI</div>
+    <h1>Council Inventory</h1>
+    <p class="muted">Office Supplies Management System</p>
+    <form id="loginForm">
+      <label>Username<input id="loginUsername" autocomplete="username" required></label>
+      <label>Password<div class="password-wrap"><input id="loginPassword" type="password" autocomplete="current-password" required><button type="button" class="icon-btn" id="togglePassword">Show</button></div></label>
+      <button class="primary full" type="submit">Sign In</button>
+      <p id="loginError" class="error"></p>
+    </form>
+    <small>Admin accounts: JJ, Judiel, Sir Ey, Niko</small>
+  </div>
+</section>
+
+<section id="appView" class="app-view hidden">
+  <aside class="sidebar">
+    <div class="side-brand">
+      <div class="brand-mark small">CI</div>
+      <div><strong>Council</strong><span>Inventory</span></div>
+    </div>
+    <nav id="nav"></nav>
+    <button class="logout-btn" id="logoutBtn">↪ Logout</button>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h2 id="pageTitle">Dashboard</h2>
+        <p id="pageSubtitle" class="muted">Inventory overview</p>
+      </div>
+      <div class="user-chip"><span id="currentUser"></span><b id="currentRole"></b></div>
+    </header>
+
+    <div id="content"></div>
+  </main>
+</section>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-card">
+    <div class="modal-head"><h3 id="modalTitle"></h3><button class="icon-btn" id="closeModal">✕</button></div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/@zxing/browser@0.1.5/umd/zxing-browser.min.js"></script>
+<script src="https://unpkg.com/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+<script src="/js/app.js?v=v8-manual-barcode-20260903-1"></script>
+</body>
+</html>
