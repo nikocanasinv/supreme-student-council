@@ -225,14 +225,17 @@ app.use(helmet({
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.set("trust proxy", 1);
+
 app.use(session({
   secret: process.env.SESSION_SECRET || "CHANGE_ME_IN_ENV",
   resave: false,
   saveUninitialized: false,
+  proxy: true,
   cookie: {
     httpOnly: true,
     sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
+    secure: true,
     maxAge: 8 * 60 * 60 * 1000
   }
 }));
